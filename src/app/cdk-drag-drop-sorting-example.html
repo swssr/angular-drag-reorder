@@ -1,0 +1,13 @@
+
+<span style="padding:20px"></span>
+<hr>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let movie of movies; let i = index" cdkDrag>
+    <span>
+      <strong>{{i + 1}}</strong>
+      {{movie}}
+    </span>
+    <div><button mat-icon-button (click)="order(i,true)"><mat-icon>expand_less</mat-icon></button>
+    <button mat-icon-button (click)="order(i,false)"><mat-icon>expand_more</mat-icon></button></div>
+  </div>
+</div>
